@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GallAmpere</class>
+ <widget class="QMainWindow" name="GallAmpere">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>449</width>
+    <height>169</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>GallAmpere</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="labelTensione">
+        <property name="text">
+         <string>Tensione:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="comboTensione">
+        <property name="toolTip">
+         <string extracomment="Selezione Tensione"/>
+        </property>
+        <property name="editable">
+         <bool>false</bool>
+        </property>
+        <property name="currentText">
+         <string>230 V</string>
+        </property>
+        <property name="currentIndex">
+         <number>4</number>
+        </property>
+        <property name="maxVisibleItems">
+         <number>14</number>
+        </property>
+        <item>
+         <property name="text">
+          <string>12 V</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>50 V</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>110 V</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>220 V</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>230 V</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>380 V</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>400 V</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="labelAssorbimento">
+        <property name="text">
+         <string>Assorbimento:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QDoubleSpinBox" name="spinBoxAssorbimento">
+        <property name="toolTip">
+         <string extracomment="Potenza assorbita"/>
+        </property>
+        <property name="suffix">
+         <string extracomment="W">  W</string>
+        </property>
+        <property name="decimals">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <double>999999999999999.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>1000.000000000000000</double>
+        </property>
+        <property name="value">
+         <double>1000.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="labelCorrente">
+        <property name="font">
+         <font>
+          <family>Noto Sans</family>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>Corrente:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="valueCorrente">
+        <property name="text">
+         <string>4.34783</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButtonCalcola">
+      <property name="text">
+       <string>Calcola</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
