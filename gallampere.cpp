@@ -43,7 +43,7 @@ void GallAmpere::on_pushButtonCalcola_clicked()
     }
     double assorbimento = ui->spinBoxAssorbimento->value();
     double corrente = assorbimento/tensione;
-    QString correnteString = QString("%1").arg(corrente);
+    QString correnteString = QString("%1 A").arg(corrente);
     ui->valueCorrente->setText(correnteString);
 
 }
