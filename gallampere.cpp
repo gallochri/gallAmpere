@@ -44,15 +44,16 @@ void GallAmpere::on_pushButtonCalcola_clicked()
     }
 
     double assorbimento = ui->spinBoxAssorbimento->value();
-    double corrente;
-    double cosfi = 1.00;
+    double cosfi = ui->spinBoxCosFi->value();
     double radice = sqrt(3);
+    double corrente;
 
     if (trifase){
         corrente = assorbimento/(tensione*cosfi*radice);
     } else {
-        corrente = assorbimento/tensione;
+        corrente = assorbimento/(tensione*cosfi);
     }
+
     QString correnteString = QString("%1 A").arg(corrente);
     ui->valueCorrente->setText(correnteString);
 }
