@@ -16,7 +16,8 @@ GallAmpere::~GallAmpere()
 void GallAmpere::on_pushButtonCalcola_clicked()
 {
     int tensioneSelected = ui->comboTensione->currentIndex();
-    double tensione;
+    bool trifase = ui->trifaseButton->isChecked();
+    double tensione = 230;
     switch( tensioneSelected )
     {
     case 0:
@@ -41,9 +42,12 @@ void GallAmpere::on_pushButtonCalcola_clicked()
         tensione = 400;
         break ;
     }
-    double assorbimento = ui->spinBoxAssorbimento->value();
-    double corrente = assorbimento/tensione;
-    QString correnteString = QString("%1 A").arg(corrente);
-    ui->valueCorrente->setText(correnteString);
-
+    if (trifase){
+        ui->valueCorrente->setText("Trifase");
+    } else {
+        double assorbimento = ui->spinBoxAssorbimento->value();
+        double corrente = assorbimento/tensione;
+        QString correnteString = QString("%1 A").arg(corrente);
+        ui->valueCorrente->setText(correnteString);
+    }
 }
