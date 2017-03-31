@@ -42,12 +42,17 @@ void GallAmpere::on_pushButtonCalcola_clicked()
         tensione = 400;
         break ;
     }
+
+    double assorbimento = ui->spinBoxAssorbimento->value();
+    double corrente;
+    double cosfi = 1.00;
+    double radice = sqrt(3);
+
     if (trifase){
-        ui->valueCorrente->setText("Trifase");
+        corrente = assorbimento/(tensione*cosfi*radice);
     } else {
-        double assorbimento = ui->spinBoxAssorbimento->value();
-        double corrente = assorbimento/tensione;
-        QString correnteString = QString("%1 A").arg(corrente);
-        ui->valueCorrente->setText(correnteString);
+        corrente = assorbimento/tensione;
     }
+    QString correnteString = QString("%1 A").arg(corrente);
+    ui->valueCorrente->setText(correnteString);
 }
