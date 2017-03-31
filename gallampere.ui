@@ -14,213 +14,158 @@
    <string>GallAmpere</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="pushButtonCalcola">
-    <property name="geometry">
-     <rect>
-      <x>9</x>
-      <y>332</y>
-      <width>80</width>
-      <height>26</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Calcola</string>
-    </property>
-   </widget>
-   <widget class="QWidget" name="">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>9</y>
-      <width>431</width>
-      <height>191</height>
-     </rect>
-    </property>
-    <layout class="QGridLayout" name="gridLayout">
-     <item row="0" column="0">
-      <widget class="QLabel" name="labelTensione">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="labelTensione">
+      <property name="text">
+       <string>Tensione:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QComboBox" name="comboTensione">
+      <property name="toolTip">
+       <string extracomment="Selezione Tensione"/>
+      </property>
+      <property name="editable">
+       <bool>false</bool>
+      </property>
+      <property name="currentText">
+       <string>230 V</string>
+      </property>
+      <property name="currentIndex">
+       <number>4</number>
+      </property>
+      <property name="maxVisibleItems">
+       <number>14</number>
+      </property>
+      <item>
        <property name="text">
-        <string>Tensione:</string>
+        <string>12 V</string>
        </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QComboBox" name="comboTensione">
-       <property name="toolTip">
-        <string extracomment="Selezione Tensione"/>
+      </item>
+      <item>
+       <property name="text">
+        <string>50 V</string>
        </property>
-       <property name="editable">
-        <bool>false</bool>
+      </item>
+      <item>
+       <property name="text">
+        <string>110 V</string>
        </property>
-       <property name="currentText">
+      </item>
+      <item>
+       <property name="text">
+        <string>220 V</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
         <string>230 V</string>
        </property>
-       <property name="currentIndex">
-        <number>4</number>
-       </property>
-       <property name="maxVisibleItems">
-        <number>14</number>
-       </property>
-       <item>
-        <property name="text">
-         <string>12 V</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>50 V</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>110 V</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>220 V</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>230 V</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>380 V</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>400 V</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-     <item row="0" column="2">
-      <widget class="QRadioButton" name="trifaseButton">
+      </item>
+      <item>
        <property name="text">
-        <string>Trifase</string>
+        <string>380 V</string>
        </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="labelAssorbimento">
+      </item>
+      <item>
        <property name="text">
-        <string>Assorbimento:</string>
+        <string>400 V</string>
        </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QDoubleSpinBox" name="spinBoxAssorbimento">
-       <property name="toolTip">
-        <string extracomment="Potenza assorbita"/>
-       </property>
-       <property name="suffix">
-        <string extracomment="W">  W</string>
-       </property>
-       <property name="decimals">
-        <number>1</number>
-       </property>
-       <property name="maximum">
-        <double>999999999999999.000000000000000</double>
-       </property>
-       <property name="singleStep">
-        <double>1000.000000000000000</double>
-       </property>
-       <property name="value">
-        <double>1000.000000000000000</double>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="2">
-      <spacer name="horizontalSpacer">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item row="2" column="0">
-      <widget class="QLabel" name="CosFi">
-       <property name="text">
-        <string>cosφ</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="1">
-      <widget class="QDoubleSpinBox" name="spinBoxCosFi">
-       <property name="minimum">
-        <double>0.010000000000000</double>
-       </property>
-       <property name="maximum">
-        <double>1.000000000000000</double>
-       </property>
-       <property name="singleStep">
-        <double>0.010000000000000</double>
-       </property>
-       <property name="value">
-        <double>1.000000000000000</double>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="2">
-      <spacer name="horizontalSpacer_2">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item row="3" column="0">
-      <widget class="QLabel" name="labelCorrente">
-       <property name="font">
-        <font>
-         <family>Noto Sans</family>
-         <weight>75</weight>
-         <italic>false</italic>
-         <bold>true</bold>
-         <underline>false</underline>
-        </font>
-       </property>
-       <property name="text">
-        <string>Corrente:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="1">
-      <widget class="QLabel" name="valueCorrente">
-       <property name="text">
-        <string>4.34783 A</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="2">
-      <spacer name="horizontalSpacer_3">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-    </layout>
-   </widget>
+      </item>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QRadioButton" name="trifaseButton">
+      <property name="text">
+       <string>Trifase</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="labelAssorbimento">
+      <property name="text">
+       <string>Assorbimento:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QDoubleSpinBox" name="spinBoxAssorbimento">
+      <property name="toolTip">
+       <string extracomment="Potenza assorbita"/>
+      </property>
+      <property name="suffix">
+       <string extracomment="W">  W</string>
+      </property>
+      <property name="decimals">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <double>999999999999999.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>1000.000000000000000</double>
+      </property>
+      <property name="value">
+       <double>1000.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="CosFi">
+      <property name="text">
+       <string>cosφ</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QDoubleSpinBox" name="spinBoxCosFi">
+      <property name="minimum">
+       <double>0.010000000000000</double>
+      </property>
+      <property name="maximum">
+       <double>1.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.010000000000000</double>
+      </property>
+      <property name="value">
+       <double>1.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="labelCorrente">
+      <property name="font">
+       <font>
+        <family>Noto Sans</family>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+        <underline>false</underline>
+       </font>
+      </property>
+      <property name="text">
+       <string>Corrente:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QLabel" name="valueCorrente">
+      <property name="text">
+       <string>4.34783 A</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QPushButton" name="pushButtonCalcola">
+      <property name="text">
+       <string>Calcola</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
